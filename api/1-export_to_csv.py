@@ -13,6 +13,7 @@ todos_url = "https://jsonplaceholder.typicode.com/users/{}/todos/"\.format(user_
 user_info = requests.request('GET', user_url).json()
 todos_info = requests.request('GET', todo_url).json()
 
+
 user_name =  user_info["name"]
 user_username = user_info["username"]
 task_completed = list(filter(lambda obj: (obj["completed"] is True), todos_info))
